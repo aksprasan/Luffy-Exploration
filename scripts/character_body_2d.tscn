@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvyi38ikj1t2j"]
+
+[ext_resource type="Script" uid="uid://dfhdvwouym2ur" path="res://scenes/character_body_2d.gd" id="1_5u4nw"]
+[ext_resource type="Texture2D" uid="uid://diae4rhl4n327" path="res://assets/sprites/Luffy.png" id="1_ou42d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5u4nw"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5u4nw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Luffy" type="Sprite2D" parent="."]
+position = Vector2(16.5, -51.125)
+scale = Vector2(0.0204819, 0.021995)
+texture = ExtResource("1_ou42d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -49)
+shape = SubResource("CircleShape2D_5u4nw")
